@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minecraft Transit Railway</title>
+  <link href="https://fastly.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <script src="https://fastly.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://fastly.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/axios@1.5.0/dist/axios.min.js"></script>
+
+  <style>
+    .bg-img {
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-1" style="background-color: #ba3b5d;">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/mtr_logo_isometric.png" alt="MTR Logo" width="36" height="36" 
+          class="d-inline-block align-text-end" />
+        <span class="align">Minecraft Transit Railway</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Wiki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Discord</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Patreon</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="bg-img" style="background-image:url(img/bg_home.png)">
+    <div class="container" style="position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);">
+      <div class="row">
+        <div class="offset-lg-2 col-lg-3">
+          <div class="w-75 rounded-circle border border-secondary-subtle border-4
+            align-middle overflow-hidden bg-secondary-subtle">
+            <img src="img/mtr_logo_isometric.png" class="w-100" />
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card">
+            <img src="https://cdn.modrinth.com/data/XKPAmI6u/images/41939ace00903808d63bd69d53323eed7dbc0f9c.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Minecraft Transit Railway</h5>
+              <p class="card-text">Build your own transport network with automated trains, boats, cable cars, and planes!</p>
+              
+              <div class="btn-group mt-4" role="group">
+                <a href="#" class="btn btn-lg btn-success" style="background: #00954e;">Download</a>
+                <a href="#" class="btn btn-lg btn-primary" style="background: #5460f2;">Join Discord</a>
+                <a href="#" class="btn btn-lg btn-danger" style="background: #ef6451;">Pateron</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    
+  </div>
+</body>
