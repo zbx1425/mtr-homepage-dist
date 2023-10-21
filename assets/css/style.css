@@ -86,12 +86,13 @@ a:hover {
     margin: auto;
 }
 
-.header {
-    text-align: center;
-}
-
 .features {
     font-size: 1.1em;
+}
+
+.features .header {
+    margin: 0.5em 0;
+    text-align: center;
 }
 
 .feature {

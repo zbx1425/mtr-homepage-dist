@@ -1,6 +1,5 @@
 'use strict'
 
-const cssRoot = document.querySelector(":root");
 const navElement = document.getElementsByTagName('nav')[0];
 const navToggle = document.getElementById('nav-expand');
 const navMobileElement = document.getElementById("nav-mobile-items");
@@ -14,12 +13,12 @@ window.addEventListener('scroll', () => {
 });
 
 navToggle.onclick = () => {
-    const rootStyle = getComputedStyle(cssRoot);
+    const rootStyle = getComputedStyle(document.documentElement);
     const dp = rootStyle.getPropertyValue("--nav-bar-mobile-display");
     
     if(dp == 'block') {
-        cssRoot.style.setProperty("--nav-bar-mobile-display", 'none')
+        document.documentElement.style.setProperty("--nav-bar-mobile-display", 'none')
     } else {
-        cssRoot.style.setProperty("--nav-bar-mobile-display", 'block')
+        document.documentElement.style.setProperty("--nav-bar-mobile-display", 'block')
     }
 }
