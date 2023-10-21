@@ -183,7 +183,7 @@ a:hover {
 }
 
 .text-icon.forge::before {
-    background-image: url("../img/icon/mcforge.jpg");
+    background-image: url("../img/icon/mcforge.svg");
 }
 
 footer {
