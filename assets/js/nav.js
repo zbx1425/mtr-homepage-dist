@@ -1,18 +1,21 @@
 'use strict'
 
 const navElement = document.getElementsByTagName('nav')[0];
-const navToggle = document.getElementById('nav-expand');
-const navMobileElement = document.getElementById("nav-mobile-items");
+const navToggle = document.getElementById('nav-hamburger');
 
-window.addEventListener('scroll', () => {
+function setNavBackground() {
     if(window.scrollY == 0) {
         navElement.classList.remove("background");
     } else {
         navElement.classList.add("background");
     }
+}
+
+window.addEventListener('scroll', () => {
+    setNavBackground();
 });
 
-navToggle.onclick = () => {
+navToggle.addEventListener('click', () => {
     const rootStyle = getComputedStyle(document.documentElement);
     const dp = rootStyle.getPropertyValue("--nav-bar-mobile-display");
     
@@ -21,4 +24,6 @@ navToggle.onclick = () => {
     } else {
         document.documentElement.style.setProperty("--nav-bar-mobile-display", 'block')
     }
-}
+});
+
+setNavBackground();

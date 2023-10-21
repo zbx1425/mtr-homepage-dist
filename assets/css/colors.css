@@ -1,11 +1,12 @@
 :root {
     --text-color-white: #fff;
     --text-color: #333;
-    --link-color: #075CA6;
+    --link-color: #0969DA;
+    --footer-color: #444;
     --color-download: #00924C;
     --color-download-mr: #00AF5C;
     --color-download-cf: #F1693C;
-    --color-wiki: #00A6C5;
+    --color-wiki: #9940A5;
     --color-discord: #5460F2;
-    --color-patreon: #FF5F09;
+    --color-patreon: #E05406;
 }

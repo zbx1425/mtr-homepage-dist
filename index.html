@@ -6,7 +6,7 @@
     <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/nav.js" async></script>
+    <script src="assets/js/nav.js" defer></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +18,11 @@
       <nav>
         <div class="nav-container">
           <div class="nav-brand">
-            <img class="nav-brand-img" src="assets/img/logo.png">
+            <img class="nav-brand-img" src="assets/img/logo.png" alt="Minecraft Transit Railway Logo">
             <span class="nav-brand-text">Minecraft Transit Railway</span>
           </div>
-          <div id="nav-mobile" class="nav-mobile">
-            <button id="nav-expand"><img src="assets/img/icon/menu.svg"></button>
+          <div class="nav-mobile">
+            <button id="nav-hamburger" aria-label="Open Navigation"></button>
           </div>
           <ul id="nav-list" class="nav-list">
             <li><a href="#">Home</a></li>
@@ -44,9 +44,9 @@
             <p>A Minecraft mod for building fully-fleged, autonomous transport network with built-in System Map and more!</p>
             
             <div class="button-row">
-              <a href="#download" class="link-button download"><img class="link-button-icon" src="assets/img/icon/download.svg"> Download</a>
-              <a href="#discord" class="link-button discord"><img class="link-button-icon" src="assets/img/icon/discord.svg"> Join Discord</a>
-              <a href="#wiki" class="link-button wiki"><img class="link-button-icon" src="assets/img/icon/wiki.svg"> Read the wiki</a>
+              <a href="#download" class="link-button download">Download</a>
+              <a href="#discord" class="link-button discord">Join Discord</a>
+              <a href="#wiki" class="link-button wiki">Read the wiki</a>
             </div>
           </div>
         </div>
@@ -121,12 +121,8 @@
             <p>Supports <span class="text-icon fabric"> Fabric</span> and <span class="text-icon forge"> Forge</span> modloader, all latest minor version from 1.16 onwards.</p>
             
             <div class="button-row">
-              <a href="https://modrinth.com/mod/minecraft-transit-railway" class="link-button download modrinth">
-                <img class="link-button-icon" src="assets/img/icon/modrinth.svg"> Modrinth
-              </a>
-              <a href="https://www.curseforge.com/minecraft/mc-mods/minecraft-transit-railway" class="link-button download curseforge">
-                <img class="link-button-icon" src="assets/img/icon/curseforge.svg"> CurseForge
-              </a>
+              <a href="https://modrinth.com/mod/minecraft-transit-railway" class="link-button download modrinth">Modrinth</a>
+              <a href="https://www.curseforge.com/minecraft/mc-mods/minecraft-transit-railway" class="link-button download curseforge">CurseForge</a>
             </div>
           </div>
           <div class="card wiki" id="wiki">
@@ -134,9 +130,7 @@
             <p>Learn more about various mechanics of the Minecraft Transit Railway Mod and check the latest news!</p>
             
             <div class="button-row">
-              <a href="https://wiki.minecrafttransitrailway.com/" class="link-button wiki">
-                <img class="link-button-icon" src="assets/img/icon/wiki.svg"> Read the Wiki
-              </a>
+              <a href="https://wiki.minecrafttransitrailway.com/" class="link-button wiki">Read the Wiki</a>
             </div>
           </div>
           <div class="card discord" id="discord">
@@ -144,9 +138,7 @@
             <p>Gets help and support with the Minecraft Transit Railway mod, and share insights with other players!</p>
             
             <div class="button-row">
-              <a href="https://discord.gg/PVZ2nfUaTW" class="link-button discord">
-                <img class="link-button-icon" src="assets/img/icon/discord.svg"> Join Discord
-              </a>
+              <a href="https://discord.gg/PVZ2nfUaTW" class="link-button discord">Join Discord</a>
             </div>
           </div>
           <div class="card patreon" id="patreon">

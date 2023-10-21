@@ -66,10 +66,14 @@ nav.background {
     display: none;
 }
 
-#nav-expand {
-    background: none;
+#nav-hamburger {
+    background: url("../img/icon/menu.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
     outline: 1px solid transparent;
     border: 1px solid transparent;
+    width: 2em;
+    height: 2em;
     cursor: pointer;
 }
 

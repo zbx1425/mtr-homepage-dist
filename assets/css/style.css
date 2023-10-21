@@ -46,7 +46,7 @@ a:hover {
     position: relative;
     color: var(--text-color-white);
     padding: 6rem 0;
-    background: linear-gradient(135deg, hsl(208, 100%, 32%), hsl(207, 82%, 50%));
+    background: linear-gradient(45deg, hsl(208, 100%, 26%), hsl(207, 90%, 46%));
     /* HACK: Banner::after triangle 100vw can cause overflow with scrollbar */
     overflow-x: hidden;
     font-size: 1.2em;
@@ -151,7 +151,7 @@ a:hover {
 
 .card.wiki {
     border-color: var(--color-wiki);
-    box-shadow: 0 0 1rem rgba(0, 166, 197, 0.2);
+    box-shadow: 0 0 1rem rgba(153, 64, 165, 0.2);
 }
 
 .card.discord {
@@ -161,7 +161,7 @@ a:hover {
 
 .card.patreon {
     border-color: var(--color-patreon);
-    box-shadow: 0 0 1rem rgba(255, 95, 9, 0.2);
+    box-shadow: 0 0 1rem rgba(255, 80, 9, 0.2);
 }
 
 .text-icon {
@@ -188,7 +188,7 @@ a:hover {
 
 footer {
     text-align: center;
-    color: gray;
+    color: var(--footer-color);
     font-size: 0.9em;
     margin: 2rem 0;
 }
