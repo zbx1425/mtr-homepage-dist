@@ -1,93 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Minecraft Transit Railway</title>
-  <link href="https://fastly.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-  <script src="https://fastly.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script src="https://fastly.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
-  <script src="https://fastly.jsdelivr.net/npm/axios@1.5.0/dist/axios.min.js"></script>
-
-  <style>
-    .bg-img {
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      background-position: center;
-      background-size: cover;
-      background-attachment: fixed;
-    }
-  </style>
-</head>
-<body>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-1" style="background-color: #ba3b5d;">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="img/mtr_logo_isometric.png" alt="MTR Logo" width="36" height="36" 
-          class="d-inline-block align-text-end" />
-        <span class="align">Minecraft Transit Railway</span>
-      </a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Download</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Wiki</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Discord</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Patreon</a>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-  </nav>
-
-  <div class="bg-img" style="background-image:url(img/bg_home.png)">
-    <div class="container" style="position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);">
-      <div class="row">
-        <div class="offset-lg-2 col-lg-3">
-          <div class="w-75 rounded-circle border border-secondary-subtle border-4
-            align-middle overflow-hidden bg-secondary-subtle">
-            <img src="img/mtr_logo_isometric.png" class="w-100" />
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/nav.js" defer></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Minecraft Transit Railway</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <div class="nav-brand">
+            <img class="nav-brand-img" src="assets/img/logo.png" alt="Minecraft Transit Railway Logo">
+            <span class="nav-brand-text">Minecraft Transit Railway</span>
           </div>
+          <div class="nav-mobile">
+            <button id="nav-hamburger" aria-label="Open Navigation"></button>
+          </div>
+          <ul id="nav-list" class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#wiki">Wiki</a></li>
+            <li><a href="#discord">Discord</a></li>
+            <li><a href="#patreon">Patreon</a></li>
+          </ul>
         </div>
-        <div class="col-lg-5">
-          <div class="card">
-            <img src="https://cdn.modrinth.com/data/XKPAmI6u/images/41939ace00903808d63bd69d53323eed7dbc0f9c.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Minecraft Transit Railway</h5>
-              <p class="card-text">Build your own transport network with automated trains, boats, cable cars, and planes!</p>
-              
-              <div class="btn-group mt-4" role="group">
-                <a href="#" class="btn btn-lg btn-success" style="background: #00954e;">Download</a>
-                <a href="#" class="btn btn-lg btn-primary" style="background: #5460f2;">Join Discord</a>
-                <a href="#" class="btn btn-lg btn-danger" style="background: #ef6451;">Pateron</a>
-              </div>
+      </nav>
+      
+      <div class="banner">
+        <div class="banner-content">
+          <div class="banner-content-train">
+            <img src="assets/img/train1.png">
+          </div>
+          <div class="banner-content-text">
+            <h1>Minecraft Transit Railway</h1>
+            <p>A Minecraft mod for building fully-fleged, autonomous transport network with built-in System Map and more!</p>
+            
+            <div class="button-row">
+              <a href="#download" class="link-button download">Download</a>
+              <a href="#discord" class="link-button discord">Join Discord</a>
+              <a href="#wiki" class="link-button wiki">Read the wiki</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  
-  <div class="container">
+    </header>
     
-  </div>
-</body>
+    <main>
+      <div class="content">
+        <div class="features">
+          <h1 class="header">Features</h1>
+          <div class="feature">
+            <div class="feature-wrapper">
+              <div class="feature-img">
+                <img src="assets/img/features/1.png">
+              </div>
+              <div class="feature-text">
+                <h2>Ease of Use</h2>
+                <p>The fundemental features and concept of the Minecraft Transit Railway Mod is designed to be simple and intuitive.<br>More complex features like signalling is available, but is not a requirement to understand it all in one go.</p>
+                <br>
+                <p>We also have <a href="https://www.youtube.com/watch?v=KIsuRxNW3Lc&list=PLp0jZgheSlXv_vjilwnbrOtdbmgvz1VkC">YouTube tutorials</a> for newcomers to get started!</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="feature">
+            <div class="feature-wrapper reversed">
+              <div class="feature-img">
+                <img src="assets/img/features/2.png">
+              </div>
+              <div class="feature-text">
+                <h2>Real-Time Simulation</h2>
+                <p>Schedule your choice of transport vehicle to automatically depart at any time and frequency you wish with mixed vehicle configurations.</p>
+                <br>
+                <p>These scheduled vehicles are all automatically simulated in the background, without the need for human interference or keeping any chunks loaded in Minecraft!</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="feature">
+            <div class="feature-wrapper">
+              <div class="feature-img">
+                <img src="assets/img/features/3.png">
+              </div>
+              <div class="feature-text">
+                <h2>Built-in System Map</h2>
+                <p>As your network grows larger, it may become more difficult to keep track of everything.</p>
+                <br>
+                <p>This mod comes in with a built-in system map accessible with your web browser, which can show a visual representation of your network, check when the next train arrives and more!</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="feature">
+            <div class="feature-wrapper reversed">
+              <div class="feature-img">
+                <img src="assets/img/features/2.png">
+              </div>
+              <div class="feature-text">
+                <h2>Extendable</h2>
+                <p>Apart from the built-in vehicles that is bundled with this mod, you can create your own custom vehicles and signages with Resource Packs.</p>
+                <br>
+                <p>You may also enjoy a wide variety of community-made contents from various regions!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cards">
+          <div class="card download" id="download">
+            <h3>Download</h3>
+            <p>This mod is available for download on both CurseForge and Modrinth.</p>
+            <p>Supports <span class="text-icon fabric"> Fabric</span> and <span class="text-icon forge"> Forge</span> modloader, all latest minor version from 1.16 onwards.</p>
+            
+            <div class="button-row">
+              <a href="https://modrinth.com/mod/minecraft-transit-railway" class="link-button download modrinth">Modrinth</a>
+              <a href="https://www.curseforge.com/minecraft/mc-mods/minecraft-transit-railway" class="link-button download curseforge">CurseForge</a>
+            </div>
+          </div>
+          <div class="card wiki" id="wiki">
+            <h3>Wiki</h3>
+            <p>Learn more about various mechanics of the Minecraft Transit Railway Mod and check the latest news!</p>
+            
+            <div class="button-row">
+              <a href="https://wiki.minecrafttransitrailway.com/" class="link-button wiki">Read the Wiki</a>
+            </div>
+          </div>
+          <div class="card discord" id="discord">
+            <h3>Discord</h3>
+            <p>Gets help and support with the Minecraft Transit Railway mod, and share insights with other players!</p>
+            
+            <div class="button-row">
+              <a href="https://discord.gg/PVZ2nfUaTW" class="link-button discord">Join Discord</a>
+            </div>
+          </div>
+          <div class="card patreon" id="patreon">
+            <h3>Support the mod!</h3>
+            <p>Making a mod is not an easy task, join patreon to enjoy custom roles on the Discord Server among other perks!</p>
+            
+            <div class="button-row">
+              <!-- The new patreon logo is :/ -->
+              <a href="https://www.patreon.com/minecraft_transit_railway" class="link-button patreon">Join Patreon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>Some copyright or disclaimer here idk :D</p>
+    </footer>
+  </body>
+</html>

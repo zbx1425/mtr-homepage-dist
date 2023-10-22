@@ -1,0 +1,218 @@
+@import "buttons.css";
+@import "navbar.css";
+@import "colors.css";
+
+:root {
+    --primary-font-set: 'Roboto', 'sans-serif';
+    --secondary-font-set: 'Segoe UI', 'sans-serif';
+    --gentle-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+}
+
+html, body {
+    font-family: var(--primary-font-set);
+    line-height: 1.1;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.25em;
+    padding: 1rem 0;
+}
+
+h2 {
+    font-size: 2em;
+    padding: 0.75rem 0;
+}
+
+h3 {
+    font-size: 1.65em;
+    padding: 0.5rem 0;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.banner {
+    position: relative;
+    color: var(--text-color-white);
+    padding: 6rem 0;
+    background: linear-gradient(45deg, hsl(208, 100%, 26%), hsl(207, 90%, 46%));
+    /* HACK: Banner::after triangle 100vw can cause overflow with scrollbar */
+    overflow-x: hidden;
+    font-size: 1.2em;
+}
+
+.banner::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-width: 5vw 100vw 0px 0;
+    border-style: solid;
+    border-color: transparent #FFF transparent transparent;
+
+}
+
+.banner-content {
+    display: flex;
+    justify-content: center;
+    max-width: 42em;
+    margin: auto;
+    padding: 0 2em;
+    align-items: center;
+    gap: 1em;
+}
+
+.banner-content-train > img {
+    max-height: 10em;
+}
+
+.content {
+    color: var(--text-color);
+    margin: 0 16rem;
+    max-width: min(68em, 90%);
+    margin: auto;
+}
+
+.features {
+    font-size: 1.1em;
+}
+
+.features .header {
+    margin: 0.5em 0;
+    text-align: center;
+}
+
+.feature {
+    padding: 2.5em 0;
+    box-shadow: 0 -1px 0 gray;
+    border-bottom: 1px solid gray;
+}
+
+.feature-wrapper {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    gap: 2rem;
+}
+
+.feature-wrapper.reversed {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.feature-img {
+    flex: 1 1 0px;
+}
+
+.feature-text {
+    flex: 1 1 0px;
+}
+
+.feature-text > h2 {
+    padding-top: 0;
+    padding-bottom: 0.5em;
+}
+
+.feature-img img {
+    width: 100%;
+    border-radius: 0.75rem;
+    box-shadow: var(--gentle-shadow);
+}
+
+.cards {
+    max-width: 90%;
+    margin: auto;
+}
+
+.card {
+    margin: 2.5rem 0;
+    padding: 0.4em 1.25em;
+    border: 2px solid;
+    border-radius: 0.75em;
+}
+
+.card.download {
+    border-color: var(--color-download);
+    box-shadow: 0 0 1rem rgba(0, 146, 76, 0.2);
+}
+
+.card.wiki {
+    border-color: var(--color-wiki);
+    box-shadow: 0 0 1rem rgba(153, 64, 165, 0.2);
+}
+
+.card.discord {
+    border-color: var(--color-discord);
+    box-shadow: 0 0 1rem rgba(84, 96, 242, 0.2);
+}
+
+.card.patreon {
+    border-color: var(--color-patreon);
+    box-shadow: 0 0 1rem rgba(255, 80, 9, 0.2);
+}
+
+.text-icon {
+    white-space: nowrap;
+}
+
+.text-icon::before {
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: middle;
+}
+
+.text-icon.fabric::before {
+    background-image: url("../img/icon/fabricmc.png");
+}
+
+.text-icon.forge::before {
+    background-image: url("../img/icon/mcforge.svg");
+}
+
+footer {
+    text-align: center;
+    color: var(--footer-color);
+    font-size: 0.9em;
+    margin: 2rem 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .feature-wrapper {
+        display: block;
+    }
+    
+    .feature-wrapper > .feature-text {
+        margin: 2em 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner-content {
+        display: block;
+        text-align: center;
+    }
+}
