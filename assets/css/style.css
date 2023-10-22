@@ -4,8 +4,8 @@
 
 :root {
     --primary-font-set: 'Roboto', 'sans-serif';
-    --secondary-font-set: 'Segoe UI', 'sans-serif';
-    --gentle-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+    --secondary-font-set: 'Roboto', 'sans-serif';
+    --gentle-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
 html, body {
@@ -45,7 +45,7 @@ a:hover {
 .banner {
     position: relative;
     color: var(--text-color-white);
-    padding: 6rem 0;
+    padding: 12rem 0;
     background: linear-gradient(45deg, hsl(208, 100%, 26%), hsl(207, 90%, 46%));
     /* HACK: Banner::after triangle 100vw can cause overflow with scrollbar */
     overflow-x: hidden;
@@ -133,35 +133,43 @@ a:hover {
 }
 
 .cards {
-    max-width: 90%;
     margin: auto;
+    display: flex;
+    column-gap: 1rem;
+    row-gap: 2rem;;
+    flex-wrap: wrap;
+    margin: 2.5rem 0;
 }
 
 .card {
-    margin: 2.5rem 0;
     padding: 0.4em 1.25em;
     border: 2px solid;
     border-radius: 0.75em;
+    flex: 40%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card.download {
     border-color: var(--color-download);
-    box-shadow: 0 0 1rem rgba(0, 146, 76, 0.2);
+    /* box-shadow: 0 0 1rem rgba(0, 146, 76, 0.2); */
 }
 
 .card.wiki {
     border-color: var(--color-wiki);
-    box-shadow: 0 0 1rem rgba(153, 64, 165, 0.2);
+    /* box-shadow: 0 0 1rem rgba(153, 64, 165, 0.2); */
 }
 
 .card.discord {
     border-color: var(--color-discord);
-    box-shadow: 0 0 1rem rgba(84, 96, 242, 0.2);
+    /* box-shadow: 0 0 1rem rgba(84, 96, 242, 0.2); */
 }
 
 .card.patreon {
     border-color: var(--color-patreon);
-    box-shadow: 0 0 1rem rgba(255, 80, 9, 0.2);
+    /* box-shadow: 0 0 1rem rgba(255, 80, 9, 0.2); */
 }
 
 .text-icon {
