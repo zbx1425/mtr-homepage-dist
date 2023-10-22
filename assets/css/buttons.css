@@ -4,7 +4,7 @@
 
 .link-button {
     display: inline-block;
-    font-family: 'Segoe UI';
+    font-family: var(--secondary-font-set);
     font-weight: 600;
     font-size: 1rem;
     border-radius: 0.4rem;
