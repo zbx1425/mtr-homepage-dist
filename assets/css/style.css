@@ -4,7 +4,6 @@
 
 :root {
     --primary-font-set: 'Roboto', 'sans-serif';
-    --secondary-font-set: 'Roboto', 'sans-serif';
     --gentle-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -35,11 +34,7 @@ h3 {
 
 a {
     color: var(--link-color);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    text-underline-offset: 0.25em;
 }
 
 .banner {
