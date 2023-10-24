@@ -9,7 +9,7 @@
 
 html, body {
     font-family: var(--primary-font-set);
-    line-height: 1.1;
+    line-height: 1.2;
     font-size: 18px;
 }
 
@@ -34,7 +34,7 @@ h3 {
 
 a {
     color: var(--link-color);
-    text-underline-offset: 0.25em;
+    text-underline-offset: 0.2em;
 }
 
 .banner {
