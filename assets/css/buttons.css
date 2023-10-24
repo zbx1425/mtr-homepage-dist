@@ -4,8 +4,8 @@
 
 .link-button {
     display: inline-block;
-    font-family: var(--secondary-font-set);
-    font-weight: 600;
+    font-family: var(--primary-font-set);
+    font-weight: 500;
     font-size: 1rem;
     border-radius: 0.4rem;
     margin-right: 0.5rem;
