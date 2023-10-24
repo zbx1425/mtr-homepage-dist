@@ -10,6 +10,7 @@ html {
 }
 
 nav {
+    background: #38383899;
     position: fixed;
     width: 100%;
     padding: 0.5em 1em;
