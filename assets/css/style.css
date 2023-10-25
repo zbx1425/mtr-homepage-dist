@@ -59,6 +59,10 @@ a {
 }
 
 .carousel-container {
+    transform: translateX(50%);
+}
+
+.carousel-content {
     font-size: 0;
     float: left;
     white-space: nowrap;
@@ -66,7 +70,7 @@ a {
     text-align: left;
 }
 
-.carousel-container img {
+.carousel-content img {
     display: inline-block;
     height: 100%;
 }

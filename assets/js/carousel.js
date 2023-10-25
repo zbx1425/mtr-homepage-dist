@@ -1,6 +1,6 @@
 'use strict'
 
-const carouselElem = document.getElementById("carousel-container");
+const carouselElem = document.getElementById("carousel-content");
 const carouselItems = [...carouselElem.children];
 for (let carouselItem of carouselItems) carouselElem.removeChild(carouselItem);
 for (let i = carouselItems.length - 1; i > 0; i--) {
@@ -9,14 +9,24 @@ for (let i = carouselItems.length - 1; i > 0; i--) {
 }
 for (let carouselItem of carouselItems) carouselElem.appendChild(carouselItem);
 for (let carouselItem of carouselItems) carouselElem.appendChild(carouselItem.cloneNode(true));
-const carouselWidth = carouselItems[0].offsetWidth * carouselItems.length;
 
-const cssText = "@keyframes slide {\
-  0% { transform: translateX(0); }\
-  100% { transform: translateX(-" + carouselWidth + "px); }\
-}";
-const styleElem = document.createElement("style");
-styleElem.appendChild(document.createTextNode(cssText));
-document.head.appendChild(styleElem);
-
-carouselElem.style.animation = "slide 80s linear infinite";
+const carouselOffset = carouselItems[0].offsetWidth * 2.5;
+let carouselItemOffset = 1;
+carouselElem.style.transform = "translateX(-" + carouselOffset + "px)";
+setInterval(() => {
+  if (carouselItemOffset >= carouselItems.length + 1) {
+    carouselItemOffset = 1;
+    carouselElem.style.transform = "translateX(-" + carouselOffset + "px)";
+  }
+  carouselElem.animate(
+    [
+      { transform: "translateX(-" + (carouselOffset + (carouselItemOffset - 1) * carouselItems[0].offsetWidth) + "px)" },
+      { transform: "translateX(-" + (carouselOffset + carouselItemOffset * carouselItems[0].offsetWidth) + "px)" }
+    ], {
+      duration: 1000,
+      easing: "ease-in-out",
+      fill: "forwards"
+    }
+  );
+  carouselItemOffset += 1;
+}, 4000);
