@@ -2,31 +2,33 @@
 
 const carouselElem = document.getElementById("carousel-content");
 const carouselItems = [...carouselElem.children];
-for (let carouselItem of carouselItems) carouselElem.removeChild(carouselItem);
-for (let i = carouselItems.length - 1; i > 0; i--) {
-  const j = Math.floor(Math.random() * (i + 1));
+
+for (let i = 0; i < carouselItems.length; i++) {
+  let j = Math.floor(Math.random() * (i + 1));
   [carouselItems[i], carouselItems[j]] = [carouselItems[j], carouselItems[i]];
 }
-for (let carouselItem of carouselItems) carouselElem.appendChild(carouselItem);
-for (let carouselItem of carouselItems) carouselElem.appendChild(carouselItem.cloneNode(true));
 
-const carouselOffset = carouselItems[0].offsetWidth * 2.5;
-let carouselItemOffset = 1;
-carouselElem.style.transform = "translateX(-" + carouselOffset + "px)";
-setInterval(() => {
-  if (carouselItemOffset >= carouselItems.length + 1) {
-    carouselItemOffset = 1;
-    carouselElem.style.transform = "translateX(-" + carouselOffset + "px)";
+let carouselItemOffset = 0;
+for (let i = 0; i < carouselItems.length; i++) {
+  if (i == 0) {
+    carouselItems[i].style.opacity = "1";
+    continue;
   }
-  carouselElem.animate(
-    [
-      { transform: "translateX(-" + (carouselOffset + (carouselItemOffset - 1) * carouselItems[0].offsetWidth) + "px)" },
-      { transform: "translateX(-" + (carouselOffset + carouselItemOffset * carouselItems[0].offsetWidth) + "px)" }
-    ], {
-      duration: 1000,
-      easing: "ease-in-out",
-      fill: "forwards"
-    }
-  );
+  carouselItems[i].style.opacity = "0";
+}
+
+setInterval(() => {
+  let prevItem = carouselItems[carouselItemOffset];
+  let nextItem = carouselItems[(carouselItemOffset + 1) % carouselItems.length];
+
+  // Cross-fade prevItem and nextItem
+  prevItem.animate([ { opacity: 1 }, { opacity: 0 } ], 
+    { duration: 1000, easing: "ease-in", fill: "forwards" });
+  nextItem.animate([ { opacity: 0 }, { opacity: 1 } ], 
+    { duration: 1000, easing: "ease-out", fill: "forwards" });
+  
   carouselItemOffset += 1;
+  if (carouselItemOffset >= carouselItems.length) {
+    carouselItemOffset = 0;
+  }
 }, 4000);
