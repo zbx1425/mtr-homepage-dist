@@ -11,7 +11,15 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" 
+      rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/vue-i18n@9/dist/vue-i18n.global.prod.js"></script>
+    <script src="assets/js/lang/common.js"></script>
+    <script src="assets/js/lang/en.js"></script>
+    <script src="assets/js/lang/zh_cn.js"></script>
+
     <title>Minecraft Transit Railway</title>
   </head>
   <body>
@@ -20,17 +28,17 @@
         <div class="nav-container">
           <div class="nav-brand">
             <img class="nav-brand-img" src="assets/img/logo.png" alt="Minecraft Transit Railway Logo">
-            <span class="nav-brand-text">Minecraft Transit Railway</span>
+            <span class="nav-brand-text">{{ $t("title") }}</span>
           </div>
           <div class="nav-mobile">
             <button id="nav-hamburger" aria-label="Open Navigation"></button>
           </div>
           <ul id="nav-list" class="nav-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#download">Download</a></li>
-            <li><a href="#wiki">Wiki</a></li>
-            <li><a href="#discord">Discord</a></li>
-            <li><a href="#patreon">Patreon</a></li>
+            <li><a href="#">{{ $t("home") }}</a></li>
+            <li><a href="#download">{{ $t("act.download.nav") }}</a></li>
+            <li><a href="#wiki">{{ $t("act.wiki.nav") }}</a></li>
+            <li><a href="#discord">{{ $t("act.discord.nav") }}</a></li>
+            <li><a href="#patreon">{{ $t("act.pateron.nav") }}</a></li>
           </ul>
         </div>
       </nav>
@@ -41,13 +49,13 @@
             <img src="assets/img/train1.png">
           </div>
           <div class="banner-content-text">
-            <h1>Minecraft Transit Railway</h1>
-            <p>A Minecraft mod for building fully-fleged, autonomous transport network with built-in System Map and more!</p>
+            <h1>{{ $t("banner.title") }}</h1>
+            <p>{{ $t("banner.subtitle") }}</p>
             
             <div class="button-row">
-              <a href="#download" class="link-button download">Download</a>
-              <a href="#discord" class="link-button discord">Join Discord</a>
-              <a href="#wiki" class="link-button wiki">Read the wiki</a>
+              <a href="#download" class="link-button download">{{ $t("act.download.button") }}</a>
+              <a href="#discord" class="link-button discord">{{ $t("act.discord.button") }}</a>
+              <a href="#wiki" class="link-button wiki">{{ $t("act.wiki.button") }}</a>
             </div>
           </div>
         </div>
@@ -71,17 +79,19 @@
     <main>
       <div class="content">
         <div class="features">
-          <h1 class="header">Features</h1>
+          <h1 class="header">{{ $t("feature.title") }}</h1>
           <div class="feature">
             <div class="feature-wrapper">
               <div class="feature-img">
                 <img src="assets/img/features/1.png">
               </div>
               <div class="feature-text">
-                <h2>Ease of Use</h2>
-                <p>The fundemental features and concept of the Minecraft Transit Railway Mod is designed to be simple and intuitive.<br>More complex features like signalling is available, but is not a requirement to understand it all in one go.</p>
+                <h2>{{ $t("feature.1.title") }}</h2>
+                <i18n-t keypath="feature.1.p.1" tag="p"><br></i18n-t>
                 <br>
-                <p>We also have <a href="https://www.youtube.com/watch?v=KIsuRxNW3Lc&list=PLp0jZgheSlXv_vjilwnbrOtdbmgvz1VkC">YouTube tutorials</a> for newcomers to get started!</p>
+                <i18n-t keypath="feature.1.p.2" tag="p">
+                  <a href="https://www.youtube.com/watch?v=KIsuRxNW3Lc&list=PLp0jZgheSlXv_vjilwnbrOtdbmgvz1VkC">{{ $t("feature.1.p.3") }}</a>
+                </i18n-t>
               </div>
             </div>
           </div>
@@ -92,10 +102,10 @@
                 <img src="assets/img/features/2.jpg">
               </div>
               <div class="feature-text">
-                <h2>Real-Time Simulation</h2>
-                <p>Schedule your choice of transport vehicle to automatically depart at any time and frequency you wish with mixed vehicle configurations.</p>
+                <h2>{{ $t("feature.2.title") }}</h2>
+                <p>{{ $t("feature.2.p.1") }}</p>
                 <br>
-                <p>These scheduled vehicles are all automatically simulated in the background, without any need for human interference or keeping any chunks loaded in Minecraft!</p>
+                <p>{{ $t("feature.2.p.2") }}</p>
               </div>
             </div>
           </div>
@@ -106,10 +116,10 @@
                 <img src="assets/img/features/3.png">
               </div>
               <div class="feature-text">
-                <h2>Built-in System Map</h2>
-                <p>As your network grows larger, it may become more difficult to keep track of everything.</p>
+                <h2>{{ $t("feature.3.title") }}</h2>
+                <p>{{ $t("feature.3.p.1") }}</p>
                 <br>
-                <p>This mod comes in with a built-in system map accessible with your web browser, which can show a visual representation of your network, check when the next train arrives and more!</p>
+                <p>{{ $t("feature.3.p.2") }}</p>
               </div>
             </div>
           </div>
@@ -120,10 +130,10 @@
                 <img src="assets/img/features/4.png">
               </div>
               <div class="feature-text">
-                <h2>Extendable</h2>
-                <p>Apart from the built-in vehicles bundled with this mod, you may also create your own custom vehicles and signages with Resource Packs.</p>
+                <h2>{{ $t("feature.4.title") }}</h2>
+                <p>{{ $t("feature.4.p.1") }}</p>
                 <br>
-                <p>In addition, there are a wide variety of community-made contents from various regions, as well as addon mods for the MTR that you can install!</p>
+                <p>{{ $t("feature.4.p.2") }}</p>
               </div>
             </div>
           </div>
@@ -132,44 +142,47 @@
         <div class="cards">
           <div class="card download" id="download">
             <div class="text">
-              <h3>Download</h3>
-              <p>This mod is available for download on both CurseForge and Modrinth.</p>
-              <p>Supports <span class="text-icon fabric"> Fabric</span> and <span class="text-icon forge"> Forge</span> modloader, all latest minor version from 1.16 onwards.</p>
+              <h3>{{ $t("act.download.title") }}</h3>
+              <p>{{ $t("act.download.p.1") }}</p>
+              <i18n-t keypath="act.download.p.2" tag="p">
+                <span class="text-icon fabric">&nbsp;{{ $t("act.download.fabric") }}</span>
+                <span class="text-icon forge">&nbsp;{{ $t("act.download.forge") }}</span>
+              </i18n-t>
             </div>
             
             <div class="button-row">
-              <a href="https://modrinth.com/mod/minecraft-transit-railway" class="link-button download modrinth">Modrinth</a>
-              <a href="https://www.curseforge.com/minecraft/mc-mods/minecraft-transit-railway" class="link-button download curseforge">CurseForge</a>
+              <a href="https://modrinth.com/mod/minecraft-transit-railway" class="link-button download modrinth">{{ $t("act.download.modrinth") }}</a>
+              <a href="https://www.curseforge.com/minecraft/mc-mods/minecraft-transit-railway" class="link-button download curseforge">{{ $t("act.download.curseforge") }}</a>
             </div>
           </div>
           <div class="card wiki" id="wiki">
             <div class="text">
-              <h3>Wiki</h3>
-              <p>Learn more about various mechanics of the Minecraft Transit Railway Mod and its addon mods, community works, latest news and more!</p>
+              <h3>{{ $t("act.wiki.title") }}</h3>
+              <p>{{ $t("act.wiki.p.1") }}</p>
             </div>
             
             <div class="button-row">
-              <a href="https://wiki.minecrafttransitrailway.com/" class="link-button wiki">Read the Wiki</a>
+              <a href="https://wiki.minecrafttransitrailway.com/" class="link-button wiki">{{ $t("act.wiki.button") }}</a>
             </div>
           </div>
           <div class="card discord" id="discord">
             <div class="text">
-              <h3>Discord</h3>
-              <p>Gets help and support with the Minecraft Transit Railway mod, and share insights with other players!</p>
+              <h3>{{ $t("act.discord.title") }}</h3>
+              <p>{{ $t("act.discord.p.1") }}</p>
             </div>
             <div class="button-row">
-              <a href="https://discord.gg/PVZ2nfUaTW" class="link-button discord">Join Discord</a>
+              <a href="https://discord.gg/PVZ2nfUaTW" class="link-button discord">{{ $t("act.discord.button") }}</a>
             </div>
           </div>
           <div class="card patreon" id="patreon">
             <div class="text">
-              <h3>Support the mod!</h3>
-              <p>Making a mod is not an easy task, join patreon to enjoy custom roles on the Discord Server among other perks!</p>
+              <h3>{{ $t("act.pateron.title") }}</h3>
+              <p>{{ $t("act.pateron.p.1") }}</p>
             </div>
             
             <div class="button-row">
               <!-- The new patreon logo is :/ -->
-              <a href="https://www.patreon.com/minecraft_transit_railway" class="link-button patreon">Join Patreon</a>
+              <a href="https://www.patreon.com/minecraft_transit_railway" class="link-button patreon">{{ $t("act.pateron.button") }}</a>
             </div>
           </div>
         </div>
@@ -177,7 +190,7 @@
     </main>
     
     <footer>
-      <p>Some copyright or disclaimer here idk :D</p>
+      <p>{{ $t("footer") }}</p>
     </footer>
   </body>
 </html>
