@@ -1,3 +1,4 @@
+if (!messages) var messages = {};
 messages["zh"] = {
   "lang.name": "繁中",
 

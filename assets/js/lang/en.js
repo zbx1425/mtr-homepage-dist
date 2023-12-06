@@ -1,3 +1,4 @@
+if (!messages) var messages = {};
 messages["en"] = {
   "lang.name": "EN",
 
