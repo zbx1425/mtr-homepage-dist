@@ -1,4 +1,4 @@
-messages["zh-CN"] = {
+messages["zh-cn"] = {
   "lang.name": "简体中文",
 
   "title": "Minecraft Transit Railway",

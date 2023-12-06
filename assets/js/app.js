@@ -1,7 +1,15 @@
 var messages = {};
 
 document.addEventListener("DOMContentLoaded", function() {
-  const userLanguage = navigator.language || navigator.useLanguage;
+  let userLanguage = (navigator.language || navigator.userLanguage).toLowerCase();
+  while (userLanguage && !messages[userLanguage]) {
+    if (userLanguage.indexOf('-') === -1) {
+      userLanguage = 'en';
+      break;
+    } else {
+      userLanguage = userLanguage.substring(0, userLanguage.lastIndexOf('-'));
+    }
+  }
 
   const i18n = VueI18n.createI18n({
     locale: userLanguage,
