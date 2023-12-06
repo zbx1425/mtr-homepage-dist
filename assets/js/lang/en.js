@@ -1,5 +1,5 @@
 messages["en"] = {
-  "lang.name": "English",
+  "lang.name": "EN",
 
   "title": "Minecraft Transit Railway",
 

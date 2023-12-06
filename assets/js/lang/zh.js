@@ -1,12 +1,12 @@
 messages["zh"] = {
-  "lang.name": "繁體中文",
+  "lang.name": "繁中",
 
   "title": "Minecraft Transit Railway",
 
   "banner.title": "Minecraft Transit Railway 我的世界鐵路",
   "banner.subtitle": "建構全自動運行的仿真軌道交通網絡。更內建路線圖等功能！",
 
-  "feature.title": "特點",
+  "feature.title": "功能特點",
 
   "feature.1.title": "簡便易用",
   "feature.1.p.1": `Minecraft Transit Railway 模組的基本功能和概念設計得簡單直觀。{0}
@@ -48,7 +48,7 @@ messages["zh"] = {
   "act.discord.button": "加入 Discord",
   "act.discord.p.1": "在討論組中獲得關於本模組的幫助和支持，並與其他玩家分享見解！",
 
-  "act.pateron.title": "支持模組！",
+  "act.pateron.title": "支持我們！",
   "act.pateron.nav": "Patreon",
   "act.pateron.button": "加入 Patreon",
   "act.pateron.p.1": "製作模組並不是一項容易的任務，通過 Patreon 支持作者，即可在 Discord 伺服器上享受自定義角色等各種特權！",

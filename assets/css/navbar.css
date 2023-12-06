@@ -108,15 +108,22 @@ nav.background {
 
 nav select {
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  text-align: right;
+  
   border: 0;
   outline: 0;
   box-shadow: none;
   font: inherit;
+
+  width: 3em;
   
   margin: 0;
   padding: 0;
   padding-right: 1rem;
-  background: url(../img/icon/caret_down.svg) no-repeat right 0em center / 1em, var(--nav-background);
+  background: url(../img/icon/caret_down.svg) no-repeat right 0em center / 1em, transparent;
   color: white;
   cursor: pointer;
   
@@ -128,9 +135,10 @@ nav select {
     outline: none;
   }
   
-  option {
-    color: inherit;
-    background-color: var(--nav-background);
+  * {
+    color: black;
+    font: inherit;
+    background-color: lightgray;
   }
 }
 
