@@ -6,8 +6,6 @@
     <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/nav.js" defer></script>
-    <script src="assets/js/carousel.js" defer></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,22 +14,27 @@
     
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="https://unpkg.com/vue-i18n@9/dist/vue-i18n.global.prod.js"></script>
-    <script src="assets/js/lang/common.js"></script>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/carousel.js" defer></script>
+    
     <script src="assets/js/lang/en.js"></script>
+    <script src="assets/js/lang/zh.js"></script>
     <script src="assets/js/lang/zh_cn.js"></script>
 
     <title>Minecraft Transit Railway</title>
   </head>
   <body>
     <header>
-      <nav>
+      <nav :class="{'background': !scrolled}"
+        :style="{'--nav-bar-mobile-display': showNavbar ? 'block' : 'none'}">
         <div class="nav-container">
           <div class="nav-brand">
             <img class="nav-brand-img" src="assets/img/logo.png" alt="Minecraft Transit Railway Logo">
             <span class="nav-brand-text">{{ $t("title") }}</span>
           </div>
           <div class="nav-mobile">
-            <button id="nav-hamburger" aria-label="Open Navigation"></button>
+            <button id="nav-hamburger" aria-label="Open Navigation" v-on:click="showNavbar = !showNavbar"></button>
           </div>
           <ul id="nav-list" class="nav-list">
             <li><a href="#">{{ $t("home") }}</a></li>
@@ -39,6 +42,15 @@
             <li><a href="#wiki">{{ $t("act.wiki.nav") }}</a></li>
             <li><a href="#discord">{{ $t("act.discord.nav") }}</a></li>
             <li><a href="#patreon">{{ $t("act.pateron.nav") }}</a></li>
+            <li>
+              <div class="locale-changer">
+                <select v-model="$i18n.locale">
+                  <option v-for="(content, lang) in langs" :value="lang">
+                    {{ content["lang.name"] }}
+                  </option>
+                </select>
+              </div>
+            </li>
           </ul>
         </div>
       </nav>

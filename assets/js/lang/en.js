@@ -1,4 +1,6 @@
 messages["en"] = {
+  "lang.name": "English",
+
   "title": "Minecraft Transit Railway",
 
   "banner.title": "Minecraft Transit Railway",
@@ -51,5 +53,5 @@ messages["en"] = {
   "act.pateron.button": "Join Pateron",
   "act.pateron.p.1": "Making a mod is not an easy task, join patreon to enjoy custom roles on the Discord Server among other perks!",
 
-  "footer": "Some copyright or disclaimer here idk :D",
+  "footer": "Some copyright or disclaimer here :D",
 };
