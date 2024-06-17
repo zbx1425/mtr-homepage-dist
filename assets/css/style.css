@@ -55,7 +55,7 @@ a {
     overflow-x: hidden;
     z-index: -100;
     text-align: right;
-    filter: blur(0.2rem);
+    filter: blur(0.1rem) brightness(80%);
 }
 
 .carousel-container {
@@ -103,7 +103,7 @@ a {
 }
 
 .banner-content-text > h1, .banner-content-text > p {
-    text-shadow: 0.15rem 0.15rem 0.2rem rgba(0, 0, 0, 0.8);
+    text-shadow: 0.1rem 0.1rem 0.35rem rgba(15, 15, 15, 1);
 }
 
 .banner-content-train > img {
@@ -229,7 +229,7 @@ a {
 footer {
     text-align: center;
     color: var(--footer-color);
-    font-size: 0.9em;
+    font-size: 0.9rem;
     margin: 2rem 0;
 }
 

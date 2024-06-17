@@ -54,5 +54,6 @@ messages["en"] = {
   "act.pateron.button": "Join Pateron",
   "act.pateron.p.1": "Making a mod is not an easy task, join patreon to enjoy custom roles on the Discord Server among other perks!",
 
-  "footer": "Some copyright or disclaimer here :D",
+  "footer.p.1": "This is not an official Minecraft product.",
+  "footer.p.2": "We are not approved nor associated with Mojang or Microsoft."
 };

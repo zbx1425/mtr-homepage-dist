@@ -10,7 +10,7 @@ html {
 }
 
 nav {
-  background: #38383899;
+  background: #363636AA;
   position: fixed;
   display: flex;
   width: 100%;
@@ -124,7 +124,8 @@ nav select {
   padding: 0;
   padding-right: 1rem;
   background: url(../img/icon/caret_down.svg) no-repeat right 0em center / 1em, transparent;
-  color: white;
+  color: var(--nav-text-color);
+  background-color: var(--nav-background);
   cursor: pointer;
   
   &::-ms-expand {
