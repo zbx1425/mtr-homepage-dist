@@ -1,4 +1,8 @@
-## mtr-homepage
+## MTR Homepage
+This is the homepage for Minecraft Transit Railway, a Minecraft Mod for building autonomous transit network.
 
-## Other works used
+## License
+This project is licensed under the MIT License.
+
+### Other works used
 - [lucide-icons](https://github.com/lucide-icons/lucide)

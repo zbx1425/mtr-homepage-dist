@@ -54,5 +54,6 @@ messages["zh-cn"] = {
   "act.pateron.button": "加入 Patreon",
   "act.pateron.p.1": "制作模组并不是一件易事，通过 Patreon 支持作者，即可在 Discord 服务器上享受自定义角色等各种特权！",
 
-  "footer": "这里可能有一些版权或免责声明 :D",
+  "footer.p.1": "这不是 Minecraft 的官方产品",
+  "footer.p.2": "我们与 Mojang 或 Microsoft 没有任何关系"
 };
