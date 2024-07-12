@@ -49,10 +49,10 @@ messages["ru"] = {
   "act.discord.button": "Посетить Discord",
   "act.discord.p.1": "Получите помощь и поддержку по моду Minecraft Transit Railway, а также поделитесь опытом с другими игроками!",
 
-  "act.pateron.title": "Поддержать мод!",
-  "act.pateron.nav": "Patreon",
-  "act.pateron.button": "Join Patreon",
-  "act.pateron.p.1": "Создание мода — нелёгкая задача, поэтом поддержите нас на Patreon, чтобы получить уникальные роли на Discord-сервере и другие привилегии!",
+  "act.patreon.title": "Поддержать мод!",
+  "act.patreon.nav": "Patreon",
+  "act.patreon.button": "Join Patreon",
+  "act.patreon.p.1": "Создание мода — нелёгкая задача, поэтом поддержите нас на Patreon, чтобы получить уникальные роли на Discord-сервере и другие привилегии!",
 
   "footer": "Какой-нибудь копирайт или дисклеймер тут :D",
 };

@@ -49,10 +49,10 @@ messages["de"] = {
   "act.discord.button": "Dem Discord beitreten",
   "act.discord.p.1": "Holen Sie sich Hilfe und Unterstützung mit dem Minecraft Transit Railway Mod und teilen Sie Erkenntnisse mit anderen Spielern!",
 
-  "act.pateron.title": "Unterstützen Sie den Mod!",
-  "act.pateron.nav": "Patreon",
-  "act.pateron.button": "Patreon beitreten",
-  "act.pateron.p.1": "Das Erstellen eines Mods ist keine leichte Aufgabe. Treten Sie Patreon bei, um benutzerdefinierte Rollen auf dem Discord-Server und andere Vorteile zu genießen!",
+  "act.patreon.title": "Unterstützen Sie den Mod!",
+  "act.patreon.nav": "Patreon",
+  "act.patreon.button": "Patreon beitreten",
+  "act.patreon.p.1": "Das Erstellen eines Mods ist keine leichte Aufgabe. Treten Sie Patreon bei, um benutzerdefinierte Rollen auf dem Discord-Server und andere Vorteile zu genießen!",
 
   "footer": "Einige Urheberrechte oder Haftungsausschluss hier :D",
 };
