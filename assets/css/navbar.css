@@ -125,7 +125,6 @@ nav select {
   padding-right: 1rem;
   background: url(../img/icon/caret_down.svg) no-repeat right 0em center / 1em, transparent;
   color: var(--nav-text-color);
-  background-color: var(--nav-background);
   cursor: pointer;
   
   &::-ms-expand {
@@ -143,3 +142,6 @@ nav select {
   }
 }
 
+nav select option {
+  background-color: var(--nav-background);
+}
