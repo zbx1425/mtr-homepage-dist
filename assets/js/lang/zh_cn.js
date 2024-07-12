@@ -49,10 +49,10 @@ messages["zh-cn"] = {
   "act.discord.button": "加入 Discord",
   "act.discord.p.1": "在讨论组中得到关于本模组的帮助和支持，并与其他玩家分享见解！",
 
-  "act.pateron.title": "支持我们！",
-  "act.pateron.nav": "Patreon",
-  "act.pateron.button": "加入 Patreon",
-  "act.pateron.p.1": "制作模组并不是一件易事，通过 Patreon 支持作者，即可在 Discord 服务器上享受自定义角色等各种特权！",
+  "act.patreon.title": "支持我们！",
+  "act.patreon.nav": "Patreon",
+  "act.patreon.button": "加入 Patreon",
+  "act.patreon.p.1": "制作模组并不是一件易事，通过 Patreon 支持作者，即可在 Discord 服务器上享受自定义角色等各种特权！",
 
   "footer.p.1": "这不是 Minecraft 的官方产品",
   "footer.p.2": "我们与 Mojang 或 Microsoft 没有任何关系"
