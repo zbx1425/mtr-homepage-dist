@@ -3,7 +3,7 @@
 @import "colors.css";
 
 :root {
-    --primary-font-set: 'Roboto', 'sans-serif';
+    --primary-font-set: 'Roboto', sans-serif;
     --gentle-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
